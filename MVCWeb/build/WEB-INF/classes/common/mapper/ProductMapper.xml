@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="common.mapper.ProductMapper">
+	
+	<!-- pspec별로 상품정보 가져오기 
+	typeAlias 지정 shop.domain.ProductVO를 Product 로 alias 지정함
+	-->
+	
+	<select id="selectByPspec" parameterType="java.lang.String" 
+	resultType="shop.domain.ProductVO">
+		select
+		<include refid="product_column"/>
+		from product where pspec=#{value}
+		order by pnum desc
+	</select>
+	<!-- 상위 카테고리 목록 가져오기 -->
+ 	<select id="getUpCategoryList" resultType="Category">
+ 		select *from upCategory order by upCg_code asc
+ 	</select>
+ 	<!-- 하위 카테고리 목록 가져오기 -->
+ 	<select id="getDownCategoryList" resultType="Category" parameterType="string">
+ 		select *from downCategory where upCg_code=#{value}
+ 	</select>
+ 	<!-- 상품정보 등록[Admin] -->
+ 	<insert id="productInsert" parameterType="Product">
+ 		insert into product values(product_seq.nextval,
+ 		#{upCg_code},#{downCg_code},#{pname},
+ 		#{pimage1:VARCHAR},#{pimage2:VARCHAR},#{pimage3:VARCHAR},
+ 		#{price},#{saleprice},#{pqty:NUMERIC},#{point:NUMERIC},
+ 		#{pspec:VARCHAR},#{pcontents:VARCHAR},#{pcompany:VARCHAR},sysdate)
+ 	</insert>
+ 	
+ 	<!-- 등록된 상품 갯수 가져오기 -->
+ 	<select id="getProductCount" resultType="_int">
+ 		select count(pnum) from product
+ 	</select>
+ 	
+ 	<!-- 상풍 목록 가져오기 -->
+ 	<select id="getProductList" resultType="Product">
+ 		<!-- select *from product order by pnum desc -->
+ 		select up.upcg_code, upCg_name, d.downCg_code, d.downCg_name, p.*
+		from upCategory up right outer join product p
+		on up.upCg_code = p.upCg_code
+		left outer join downCategory d
+		on p.downCg_code = d.downCg_code order by 1 asc, 3 asc
+ 	</select>
+		<sql id="product_column">
+			
+		pnum, upCg_code, downCg_code, pname,
+		nvl(pimage1,'noimage.png') pimage1,
+		nvl(pimage2,'noimage.png') pimage2,
+		nvl(pimage3,'noimage.png') pimage3,
+		price, saleprice, pqty, point, pspec,
+		pcontents,pcompany,pindate
+			
+		</sql>
+ 	<!-- 상품번호로 상품정보 가져오기 -->
+	<select id="productInfo" resultType="Product" parameterType="string">
+		select 
+		<include refid="product_column"/>
+		from product where pnum=#{pnum}
+	</select>
+	
+	<!-- 상품번호로 상품정보 삭제하기 -->
+	<delete id="productDelete" parameterType="string">
+		delete from product where pnum = #{pnum}
+	</delete>
+</mapper>
