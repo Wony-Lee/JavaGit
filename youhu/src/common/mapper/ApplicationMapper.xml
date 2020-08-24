@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapper namespace="common.mapper.ApllicationMapper">
+
+<!-- 게시글 등록하기 -->
+<insert id="applicationInsert" parameterType="Application">
+	insert into values(applicationview_seq.nextval,
+	#{aidx},#{name},#{sex},#{birth},#{tel},
+	#{post},#{addr1},#{addr2},#{contents:VARCHAR},sysdate)
+</insert>
+
+<!-- 게시글 불러오기 -->
+<select id="getAppList" resultType="Application">
+select count(aidx) cnt from applicationview
+</select>
+
+</mapper>
