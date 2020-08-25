@@ -23,7 +23,7 @@ public class ApplicationListAction extends AbstractAction {
 		
 		req.setAttribute("totalCount",totalCount);
 		req.setAttribute("AppList", arr);
-		this.setViewPage("../youhu/ApplicationList.jsp");
+		this.setViewPage("../Application/ApplicationList.jsp");
 		this.setRedirect(false);
 	}
 
