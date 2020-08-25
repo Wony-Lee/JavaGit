@@ -17,7 +17,7 @@ public class ApplicationListAction extends AbstractAction {
 	public void execute(HttpServletRequest req, HttpServletResponse res) throws Exception {
 		
 		// 총 게시글 가져오기
-		int totalCount = dao.getAppCount();
+		int totalCount =1;// dao.getAppCount();
 		
 		List<ApplicationVO> arr = dao.getAppList();
 		

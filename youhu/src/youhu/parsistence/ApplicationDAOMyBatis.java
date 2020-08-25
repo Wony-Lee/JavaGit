@@ -10,14 +10,14 @@ import common.base.DAOMyBatisBase;
 public class ApplicationDAOMyBatis extends DAOMyBatisBase{
 	
 	//네임스페이스 지정. SampleMapper.xml에 지정된 namespace값과 동일해야 함
-	private final String NS = "common.base.SampleMapper";
+	private final String NS = "common.mapper.ApplicationMapper";
 	private SqlSession ses;
 	
 	//게시글을 저장
 	public int applicationInsert(ApplicationVO appInsert) {
 		try {
 			ses = this.getSqlSessionFactory().openSession();
-			int n = ses.insert(NS+".appInsert", appInsert);
+			int n = ses.insert(NS+".applicationInsert", appInsert);
 			if(n>0) ses.commit();
 			else ses.rollback();
 			
@@ -31,7 +31,7 @@ public class ApplicationDAOMyBatis extends DAOMyBatisBase{
 	public List<ApplicationVO> getAppList(){
 		try {
 			ses=this.getSqlSessionFactory().openSession();
-			List<ApplicationVO> arr = ses.selectList(NS+".appList");
+			List<ApplicationVO> arr = ses.selectList(NS+".getAppList");
 			
 			return arr;
 		} finally {

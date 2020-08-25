@@ -7,7 +7,7 @@ import java.sql.SQLException;
 public class DBUtil 
 {
 	private static String url="jdbc:oracle:thin:@localhost:1521:XE";
-	private static String user = "myshop", pwd="tiger";
+	private static String user = "youhu", pwd="youhu123";
 	// static 블럭은 클래스 로딩 타임에 가장 먼저 메모리에 올라가는 영역
 	// main()메소드보다도 먼저 올라감
 	static 
