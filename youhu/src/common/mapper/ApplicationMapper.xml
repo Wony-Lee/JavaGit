@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="common.mapper.ApllicationMapper">
+<mapper namespace="common.mapper.ApplicationMapper">
 <!-- 게시글 등록하기 -->
 <insert id="applicationInsert" parameterType="Application">
 	insert into values(applicationview_seq.nextval,
