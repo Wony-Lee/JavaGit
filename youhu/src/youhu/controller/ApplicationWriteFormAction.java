@@ -9,22 +9,16 @@ import Application.model.ApplicationVO;
 import common.controller.AbstractAction;
 import youhu.parsistence.ApplicationDAOMyBatis;
 
-public class ApplicationListAction extends AbstractAction {
+public class ApplicationWriteFormAction extends AbstractAction {
 
 	ApplicationDAOMyBatis dao = new ApplicationDAOMyBatis();
 	
 	@Override
 	public void execute(HttpServletRequest req, HttpServletResponse res) throws Exception {
 		
-		// 총 게시글 가져오기
-		int totalCount = dao.getAppCount();
-		
-		List<ApplicationVO> arr = dao.getAppList();
-		
-		req.setAttribute("totalCount",totalCount);
-		req.setAttribute("appList", arr);
-		this.setViewPage("./Application/ApplicationList.jsp");
+		this.setViewPage("Application/ApplicationWrite.jsp");
 		this.setRedirect(false);
+
 	}
 
 }

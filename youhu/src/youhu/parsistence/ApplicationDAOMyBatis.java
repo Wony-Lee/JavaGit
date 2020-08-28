@@ -20,7 +20,6 @@ public class ApplicationDAOMyBatis extends DAOMyBatisBase{
 			int n = ses.insert(NS+".applicationInsert", appInsert);
 			if(n>0) ses.commit();
 			else ses.rollback();
-			
 			return n;
 		} finally {
 			close(ses);
@@ -51,4 +50,14 @@ public class ApplicationDAOMyBatis extends DAOMyBatisBase{
 		}
 	}
 	
+	public ApplicationVO AppInfo(String midx)
+	{
+		try {
+			ses = this.getSqlSessionFactory().openSession();
+			ApplicationVO avo = ses.selectOne(NS+".AppInfo", midx);
+			return avo;
+		} finally {
+			close(ses);
+		}
+	}
 }

@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-
+<%
+	String myctx = request.getContextPath();
+%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -42,7 +44,7 @@
 	<div class="container">
 		<div class="navbar bg-light navbar-light">
 			<ul class="navbar-nav">
-				<li class="nav-item active"><a class="nav-link" href="/main.jsp">ImageLogo</a>
+				<li class="nav-item active"><a class="nav-link" href="main.do">ImageLogo</a>
 				</li>
 			</ul>
 
@@ -65,7 +67,7 @@
 				<ul class="navbar-nav ml-auto">
 						<li class="nav-item"><a class="nav-link" href="/news.jsp">공지사항</a></li>
 						<li class="nav-item"><a class="nav-link" href="/input">입양/분실등록</a></li>
-						<li class="nav-item"><a class="nav-link" href="/inputBoard/Application.jsp">게시판</a></li>
+						<li class="nav-item"><a class="nav-link" href="<%=myctx%>/appList.do">게시판</a></li>
 						<li class="nav-item"><a class="nav-link" href="/sss.jsp">고객센터</a></li>
 						<li class="nav-item"><a class="nav-link" href="#">업체정보</a></li>
 						<li class="nav-item"><a class="nav-link" href="#">후원처</a></li>

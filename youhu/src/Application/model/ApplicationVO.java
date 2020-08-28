@@ -8,18 +8,20 @@ public class ApplicationVO {
 	private String name;
 	private int sex;
 	private String birth;
-	private int tel;
-	private int post;
+	private String tel;
+	private String post;
 	private String addr1;
 	private String addr2;
 	private String contents;
 	private Timestamp wdate;
+	private int midx;
+	private int downcg_code;
 	
 	public ApplicationVO() {
 		
 	}
 	
-	public ApplicationVO(int aidx, String name, int sex, String birth, int tel, int post, String addr1, String addr2,
+	public ApplicationVO(int aidx, String name, int sex, String birth, String tel, String post, String addr1, String addr2,
 			String contents, Timestamp wdate) {
 		super();
 		this.aidx = aidx;
@@ -34,9 +36,25 @@ public class ApplicationVO {
 		this.wdate = wdate;
 	}
 	
+	public ApplicationVO(int aidx, String name, int sex, String birth, String tel, String post, String addr1, String addr2,
+			String contents, Timestamp wdate, int midx, int downcg_code) {
+		super();
+		this.aidx = aidx;
+		this.name = name;
+		this.sex = sex;
+		this.birth = birth;
+		this.tel = tel;
+		this.post = post;
+		this.addr1 = addr1;
+		this.addr2 = addr2;
+		this.contents = contents;
+		this.wdate = wdate;
+		this.midx = midx;
+		this.downcg_code = downcg_code;
+	}
 	
 
-	public ApplicationVO(String birth, int tel, int post, String addr1, String addr2) {
+	public ApplicationVO(String birth, String tel, String post, String addr1, String addr2) {
 		super();
 		this.birth = birth;
 		this.tel = tel;
@@ -77,19 +95,19 @@ public class ApplicationVO {
 		this.birth = birth;
 	}
 
-	public int getTel() {
+	public String getTel() {
 		return tel;
 	}
 
-	public void setTel(int tel) {
+	public void setTel(String tel) {
 		this.tel = tel;
 	}
 
-	public int getPost() {
+	public String getPost() {
 		return post;
 	}
 
-	public void setPost(int post) {
+	public void setPost(String post) {
 		this.post = post;
 	}
 

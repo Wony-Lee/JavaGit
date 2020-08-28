@@ -19,7 +19,7 @@ import javax.servlet.http.HttpServletResponse;
  * Servlet implementation class FrontController
  */
 @WebServlet(urlPatterns = { "/FrontController", "*.do" }, initParams = {
-		@WebInitParam(name = "config", value = "C:\\Users\\a1_11\\Desktop\\eclips-IDE\\workspace\\MVCWeb\\WebContent\\WEB-INF\\Command.properties") })
+		@WebInitParam(name = "config", value = "C:\\Users\\a1_11\\git\\repository\\MVCWeb\\WebContent\\WEB-INF\\Command.properties") })
 public class FrontController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
