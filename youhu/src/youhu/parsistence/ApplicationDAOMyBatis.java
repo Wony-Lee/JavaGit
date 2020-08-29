@@ -26,6 +26,19 @@ public class ApplicationDAOMyBatis extends DAOMyBatisBase{
 		}
 	}
 	
+	public int applicationUpdate(ApplicationVO appUpdate) {
+		try {
+			ses = this.getSqlSessionFactory().openSession();
+			int n = ses.update(NS+",applicationUpdate", appUpdate);
+			if(n>0) ses.commit();
+			else ses.rollback();
+			
+			return n;
+		} finally {
+			close(ses);
+		}
+	}
+	
 	//게시글을 얻어옴
 	public List<ApplicationVO> getAppList(){
 		try {
