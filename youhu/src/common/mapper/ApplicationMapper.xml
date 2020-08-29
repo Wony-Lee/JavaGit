@@ -24,4 +24,8 @@
 	from applicationview where aidx=#{aidx}
 </select>
 
+<update id="applicationUpdate" parameterType="appUpdate">
+	update applicationview set contents=#{contents} where midx = #{midx}
+</update>
+
 </mapper>
