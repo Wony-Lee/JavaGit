@@ -3,6 +3,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <jsp:include page="/top.jsp"/>
 <p></p>
+<form name="appF" id="appF" action="appEdit.do" method="post">
 
 <div class="container">
 	<div class="col-md-12">
@@ -38,15 +39,15 @@
 				</tr>
 				<tr>
 					<td class="text-right m" style="vertical-align: middle;">이름 :</td>
-					<td><input class="form-control" value="${avo.name}"></td>
+					<td><input class="form-control" value="${avo.name}" readonly></td>
 					<td class="text-right m" style="vertical-align: middle;">성별 :</td>
-					<td><input class="form-control" value="${avo.sex}"></td>
+					<td><input class="form-control" value="${avo.sex}" readonly></td>
 
 				</tr>
 				<tr>
 					<td class="text-right m" style="vertival-align: middle;">생년월일 :</td>
 					<!-- 조만간 수정예정 -->
-					<td><input class="form-control" placeholder="Birth" value="${avo.birth}"></td>
+					<td><input class="form-control" placeholder="Birth" value="${avo.birth}" readonly></td>
 					
 					<td class="text-right m" style="vertival-align: middle;">연락처 :</td>
 					<td><input class="form-control" placeholder="Tel" value="${avo.tel}"></td>
@@ -70,7 +71,7 @@
 				</tr>
 				<tr>
 					<td class="text-right" colspan="2"><button type="button" class="btn btn-outline-success">수정</button></td>
-					<td class="text-left" colspan="2"><button type="button" onclick="javascript:history.back()" class="btn btn-outline-danger">취소</button></td>
+					<td class="text-left" colspan="2"><button type="button" onclick="location.href='appList.do'" class="btn btn-outline-danger">취소</button></td>
 				</tr>
 			</table>
 			
@@ -79,5 +80,6 @@
 		</div>
 	</div>
 </div>
+</form>
 
 <jsp:include page="/foot.jsp"/>
