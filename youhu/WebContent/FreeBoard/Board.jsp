@@ -32,10 +32,9 @@
 					
 					<tr><!-- table top -->
 						<td>글번호</td>
-						<td>제목</td>
+						<td colspan="2">제목</td>
 						<td>조회수</td>
 						<td>날짜</td>
-						<td>수정|삭제</td>
 					</tr><!-- table end -->
 					
 					<tr><!-- table body -->
@@ -44,10 +43,9 @@
 					
 					<tr><!-- table Page -->
 						<td>a</td>
-						<td>b</td>
+						<td colspan="2">b</td>
 						<td>c</td>
 						<td>d</td>
-						<td>e</td>
 					</tr><!-- table Page end -->
 			
 					<tr><!-- table foot -->

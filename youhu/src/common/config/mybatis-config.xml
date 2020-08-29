@@ -5,7 +5,7 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 <configuration>
 	<typeAliases>
 		<typeAlias type="Application.model.ApplicationVO" alias="Application"/>
-		
+		<typeAlias type="user.model.MemberVO" alias="Member"/>
 	</typeAliases>
 
 	<environments default="MyDBCP">
@@ -31,6 +31,7 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 	<mappers>
 		<!-- <mapper resource="common/mapper/ApplicationMapper.xml"/> -->
 		<mapper resource="common/mapper/SampleMapper.xml"/>	
-		<mapper resource="common/mapper/ApplicationMapper.xml"/>	
+		<mapper resource="common/mapper/ApplicationMapper.xml"/>
+		<mapper resource="common/mapper/MemberMapper.xml"/>
 	</mappers>
 </configuration>

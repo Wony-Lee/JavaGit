@@ -38,18 +38,18 @@
 				</tr>
 				<tr>
 					<td class="text-right m" style="vertical-align: middle;">이름 :</td>
-					<td><input class="form-control" value="${avo.name}" readonly></td>
+					<td><input class="form-control" value="${avo.name}"></td>
 					<td class="text-right m" style="vertical-align: middle;">성별 :</td>
-					<td><input class="form-control" value="${avo.sex}" readonly></td>
+					<td><input class="form-control" value="${avo.sex}"></td>
 
 				</tr>
 				<tr>
 					<td class="text-right m" style="vertival-align: middle;">생년월일 :</td>
 					<!-- 조만간 수정예정 -->
-					<td><input class="form-control" placeholder="Birth" value="${avo.birth}" readonly></td>
+					<td><input class="form-control" placeholder="Birth" value="${avo.birth}"></td>
 					
 					<td class="text-right m" style="vertival-align: middle;">연락처 :</td>
-					<td><input class="form-control" placeholder="Tel" value="${avo.tel}" readonly></td>
+					<td><input class="form-control" placeholder="Tel" value="${avo.tel}"></td>
 
 					
 				</tr>
@@ -61,12 +61,12 @@
 				</tr>
 				<tr>
 					<td class="text-right m" style="vertival-align: middle;">주소 :</td>
-					<td><input class="form-control" placeholder="Addr1" value="${avo.addr1}" readonly></td>
-					<td colspan="2"><input class="form-control" placeholder="Addr2" value="${avo.addr2}" readonly></td>
+					<td><input class="form-control" placeholder="Addr1" value="${avo.addr1}"></td>
+					<td colspan="2"><input class="form-control" placeholder="Addr2" value="${avo.addr2}"></td>
 				</tr>
 				<tr>
 					<td colspan="4">
-					<textarea class="form-control" cols="4" rows="4" placeholder="Self-introduction" readonly>${avo.contents}</textarea></td>
+					<textarea class="form-control" cols="4" rows="4" placeholder="Self-introduction">${avo.contents}</textarea></td>
 				</tr>
 				<tr>
 					<td class="text-right" colspan="2"><button type="button" class="btn btn-outline-success">수정</button></td>

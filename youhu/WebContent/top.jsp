@@ -44,13 +44,13 @@
 	<div class="container">
 		<div class="navbar bg-light navbar-light">
 			<ul class="navbar-nav">
-				<li class="nav-item active"><a class="nav-link" href="main.do">ImageLogo</a>
+				<li class="nav-item active"><a class="nav-link" href="<%=myctx%>/main.do">ImageLogo</a>
 				</li>
 			</ul>
 
 			<ul class="nav navbar-expand-sm bg-light justify-content-right">
-				<li class="nav-item"><a class="nav-link" href="/login.jsp">로그인</a></li>
-				<li class="nav-item"><a class="nav-link" href="/signup.jsp">회원가입</a></li>
+				<li class="nav-item"><a class="nav-link" href="<%=myctx%>/login.do">로그인</a></li>
+				<li class="nav-item"><a class="nav-link" href="<%=myctx%>/join.do">회원가입</a></li>
 				<li class="nav-item"><a class="nav-link" href="/Search.jsp">ID/PWD 찾기</a>
 				</li>
 			</ul>
