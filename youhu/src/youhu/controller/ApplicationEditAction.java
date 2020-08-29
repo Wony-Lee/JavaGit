@@ -22,8 +22,9 @@ public class ApplicationEditAction extends AbstractAction {
 			this.setRedirect(true);
 			return;
 		}
+		int member = Integer.parseInt(midx);
 		ApplicationDAOMyBatis dao = new ApplicationDAOMyBatis();
-		ApplicationVO avo = dao.AppInfo(Integer.parseInt(midx.trim()));
+		ApplicationVO avo = dao.AppInfo(midx);
 		if(avo==null) {
 			String viewPage=CommonUtil.addMsgBack(req, "해당 글이 존재하지 않습니다.");
 			this.setViewPage(viewPage);
@@ -31,7 +32,8 @@ public class ApplicationEditAction extends AbstractAction {
 			return;
 		}
 		
-
+		this.setRedirect(true);
+		this.setViewPage("appList.do");
 	}
 
 }

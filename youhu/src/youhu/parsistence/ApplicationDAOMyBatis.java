@@ -26,6 +26,8 @@ public class ApplicationDAOMyBatis extends DAOMyBatisBase{
 		}
 	}
 	
+	
+	// 게시글 수정
 	public int applicationUpdate(ApplicationVO appUpdate) {
 		try {
 			ses = this.getSqlSessionFactory().openSession();
