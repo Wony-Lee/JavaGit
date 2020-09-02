@@ -20,7 +20,7 @@
 				    <a class="nav-link" href="../Review/Review.jsp">분양후기</a>
 				  </li>
 				  <li class="nav-item">
-				    <a class="nav-link" href="../FreeBoard/Board.jsp">자유게시판</a>
+				    <a class="nav-link" href="BoardList.do">자유게시판</a>
 				  </li>
 				</ul>
 			</div>
@@ -73,8 +73,8 @@
 				</tr>
 			</table>
 		
-			<input type="text" class="form-control" id="midx" name="midx" value="1" readonly>
-			<input type="text" class="form-control" id="downcg_code" name="down_cg" value="9000" readonly>
+			<input type="text" class="form-control" id="midx" name="midx" value="9" readonly>
+			<input type="text" class="form-control" id="downcg_code" name="downcg_code" value="9000" readonly>
 
 			</div>
 		

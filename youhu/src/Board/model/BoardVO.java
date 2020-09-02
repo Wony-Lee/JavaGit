@@ -1,16 +1,15 @@
 package Board.model;
 
 import java.sql.Date;
+import java.sql.Timestamp;
 
 public class BoardVO {
 	
-	private int ridx;
+	private int bidx;
 	private String subject;
 	private String name;
 	private String contents;
-	private Date indate;
-	private String image;
-	private String image2; 
+	private Timestamp indate; 
 	private int downcg_code;
 	private int midx;
 	
@@ -18,26 +17,23 @@ public class BoardVO {
 		
 	}
 	
-	public BoardVO(int ridx, String subject, String name, String contents, Date indate, String image, String image2,
-			int downcg_code, int midx) {
+	public BoardVO(int bidx, String subject, String name, String contents, Timestamp indate, int downcg_code, int midx) {
 		super();
-		this.ridx = ridx;
+		this.bidx = bidx;
 		this.subject = subject;
 		this.name = name;
 		this.contents = contents;
 		this.indate = indate;
-		this.image = image;
-		this.image2 = image2;
 		this.downcg_code = downcg_code;
 		this.midx = midx;
 	}
 
-	public int getRidx() {
-		return ridx;
+	public int getBidx() {
+		return bidx;
 	}
 
-	public void setRidx(int ridx) {
-		this.ridx = ridx;
+	public void setBidx(int bidx) {
+		this.bidx = bidx;
 	}
 
 	public String getSubject() {
@@ -64,28 +60,12 @@ public class BoardVO {
 		this.contents = contents;
 	}
 
-	public Date getIndate() {
+	public Timestamp getIndate() {
 		return indate;
 	}
 
-	public void setIndate(Date indate) {
+	public void setIndate(Timestamp indate) {
 		this.indate = indate;
-	}
-
-	public String getImage() {
-		return image;
-	}
-
-	public void setImage(String image) {
-		this.image = image;
-	}
-
-	public String getImage2() {
-		return image2;
-	}
-
-	public void setImage2(String image2) {
-		this.image2 = image2;
 	}
 
 	public int getDowncg_code() {

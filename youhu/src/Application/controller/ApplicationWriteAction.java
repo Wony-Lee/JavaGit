@@ -1,4 +1,4 @@
-package youhu.controller;
+package Application.controller;
 
 import java.sql.Timestamp;
 
@@ -37,8 +37,8 @@ public class ApplicationWriteAction extends AbstractAction{
 			return;
 		}
 		int member = Integer.parseInt(midx);
-		int down = Integer.parseInt(down_cg);
-		ApplicationVO appInsert = new ApplicationVO(0,name,sex,birth,tel,post,addr1,addr2,contents,wdate,member,down);
+	
+		ApplicationVO appInsert = new ApplicationVO(0,name,sex,birth,tel,post,addr1,addr2,contents,wdate,member,0);
 		ApplicationDAOMyBatis dao = new ApplicationDAOMyBatis();
 		int n = dao.applicationInsert(appInsert);
 		

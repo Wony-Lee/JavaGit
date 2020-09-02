@@ -1,4 +1,4 @@
-package youhu.controller;
+package Application.controller;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -18,7 +18,7 @@ public class ApplicationEditAction extends AbstractAction {
 		
 		if(aidx==null||midx==null||aidx.trim().isEmpty()||midx.trim().isEmpty())
 		{
-			this.setViewPage("edit.do");
+			this.setViewPage("appEdit.do");
 			this.setRedirect(true);
 			return;
 		}

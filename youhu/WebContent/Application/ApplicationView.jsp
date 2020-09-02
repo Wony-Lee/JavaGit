@@ -17,7 +17,7 @@
 				    <a class="nav-link" href="../Review/Review.jsp">분양후기</a>
 				  </li>
 				  <li class="nav-item">
-				    <a class="nav-link" href="../FreeBoard/Board.jsp">자유게시판</a>
+				    <a class="nav-link" href="BoardList.do">자유게시판</a>
 				  </li>
 				</ul>
 			</div>
@@ -69,7 +69,7 @@
 					<textarea class="form-control" cols="4" rows="4" placeholder="Self-introduction" readonly>${avo.contents}</textarea></td>
 				</tr>
 				<tr>
-					<td class="text-right" colspan="2"><button type="button" onclick="location.href='qppEdit.do'" class="btn btn-outline-success">수정</button></td>
+					<td class="text-right" colspan="2"><button type="button" onclick="location.href='appEdit.do'" class="btn btn-outline-success">수정</button></td>
 					<td class="text-left" colspan="2"><button type="button" onclick="location.href='appList.do'" class="btn btn-outline-danger">취소</button></td>
 				</tr>
 			</table>

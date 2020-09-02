@@ -3,6 +3,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <jsp:include page="/top.jsp"/>
 <p></p>
+<form name="borF" id="borF" action="BoardWriteEnd.do" method="post">
 <div class="container">
 	<div class="col-md-12">
 		<div class="row">
@@ -11,13 +12,13 @@
 				<div class="col-md-2">
 					<ul class="nav flex-column">
 					  <li class="nav-item">
-					    <a class="nav-link" href="../Application/Application.jsp">봉사신청</a>
+					    <a class="nav-link" href="appList.do">봉사신청</a>
 					  </li>
 					  <li class="nav-item">
 					    <a class="nav-link" href="../Review/Review.jsp">분양후기</a>
 					  </li>
 					  <li class="nav-item">
-					    <a class="nav-link" href="Board.jsp">자유게시판</a>
+					    <a class="nav-link" href="BoardList.do">자유게시판</a>
 					  </li>
 					</ul>
 				</div>
@@ -30,33 +31,52 @@
 						</tr>
 						<tr>
 							<td class="text-right m" style="vertical-align: middle;">제목 :</td>
-							<td><input class="form-control" placeholder="subject"></td>
+							<td><input class="form-control" id="subject" name="subject" placeholder="subject"></td>
 							<td class="text-right m" style="vertical-align: middle;">작성자 :</td>
-							<td><input class="form-control" placeholder="Name" readonly></td>
-						</tr>
-						
-						<tr>
-							<td class="text-right m" style="vertical-align: middle;">회원번호 : </td>
-							<td><input class="form-control" placeholder="subject"></td>
-							<td class="text-right m" style="vertical-align: middle;">작성일 : </td>
-							<td><input class="form-control" placeholder="Name" readonly></td>
+							<td><input class="form-control" id="name" name="name" placeholder="Name"></td>
 						</tr>
 						
 						<tr>
 							<td colspan="4"><textarea class="form-control" cols="4" rows="15"
-							placeholder="Content"></textarea>
+							id="contents" name="contents" placeholder="Content"></textarea>
 						</tr>
 						<tr>
 							<td class="text-right" colspan="2">
-							<button type="button" class="btn btn-outline-success">글 등록</button></td>
+							<button type="submit" class="btn btn-outline-success" id="btnWrite" name="btnWrite">글 등록</button></td>
 							<td class="text-left" colspan="2">
 							<button type="button" class="btn btn-outline-danger" onclick="location.href='javascript:history.back()'">목록으로</button></td>
 						</tr>
 					</table>
+						<input type="text" class="form-control" id="midx" name="midx" value="9" readonly>
+						<input type="text" class="form-control" id="downcg_code" name="downcg_code" value="8000" readonly>
 				</div>
 				
 		</div>
 	</div>
 </div>
+</form>
+<script>
+$(function(){
+	$('#btnWrite').click(function(){
+		if(!$('#name').val()){
+			alert('이름이 입력되지 않았습니다.');
+			return false;
+		}
+		if(!$('#subject').val()){
+			alert('제목이 입력되지 않았습니다.');
+			$('#subject').focus();
+			return false;
+		}
+		if(!$('#contents').val()){
+			alert('내용을 입력해주세요.');
+			$('#contents').focus();
+			return false;
+		}
+		$('#borF').submit();
+		
+	})
+
+})
+</script>
 
 <jsp:include page="/foot.jsp"/>

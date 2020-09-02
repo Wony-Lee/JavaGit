@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="common.mapper.BoardMapper">
+
+<!-- 게시글 등록하기 -->
+<insert id="boardInsert" parameterType="Board">
+	insert into Board values(Board_seq.nextval,
+	#{subject},#{name},#{contents},sysdate,#{midx},#{downcg_code})
+</insert>
+
+<!-- 게시글 불러오기 -->
+<select id="getBoardList" resultType="Board">
+	select *from Board order by bidx desc
+</select>
+
+<select id="getBoardCount" resultType="_int">
+	select count(bidx) from Board
+</select>
+
+<select id="boardInfo" resultType="Board" parameterType="string">
+	select subject,name,contents,indate,midx,downcg_code from Board where bidx = #{bidx}
+</select>
+
+</mapper>
