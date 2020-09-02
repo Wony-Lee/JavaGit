@@ -28,9 +28,9 @@
 					
 					<tr>
 						<td style="vertical-align: middle;">이름</td>
-						<td><input class="form-control" readonly></td>
+						<td><input class="form-control" ></td>
 						<td style="vertical-align: middle;">작성일</td>
-						<td><input class="form-control" readonly></td>
+						<td><input class="form-control" ></td>
 					</tr>
 					
 					<tr>
