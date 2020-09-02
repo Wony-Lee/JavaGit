@@ -50,10 +50,10 @@ public class BoardDAOMyBatis extends DAOMyBatisBase{
 		}
 	}
 	
-	public BoardVO BoardInfo(String midx) {
+	public BoardVO boardInfo(String bidx) {
 		try {
 			ses=this.getSqlSessionFactory().openSession();
-			BoardVO avo = ses.selectOne(NS+".BoardInfo", midx);
+			BoardVO avo = ses.selectOne(NS+".boardInfo", bidx);
 			return avo;
 		} finally {
 			close(ses);

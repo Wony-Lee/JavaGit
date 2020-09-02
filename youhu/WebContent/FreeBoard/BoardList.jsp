@@ -51,7 +51,7 @@
 					<tr id="bl${bor.count}"><!-- table Page -->
 						<td>${bl.bidx}</td>
 						<td>${bl.name}</td>
-						<td><a href="borView.do?bidx=${bl.bidx}">${bl.subject}</a></td>
+						<td><a href="BoardView.do?bidx=${bl.bidx}">${bl.subject}</a></td>
 						<td>${bl.indate}</td>
 					</tr><!-- table Page end -->
 					</c:forEach>
