@@ -17,7 +17,7 @@
 				    <a class="nav-link" href="appList.do">봉사신청</a>
 				  </li>
 				  <li class="nav-item">
-				    <a class="nav-link" href="../Review/Review.jsp">분양후기</a>
+				    <a class="nav-link" href="ReviewList.do">분양후기</a>
 				  </li>
 				  <li class="nav-item">
 				    <a class="nav-link" href="BoardList.do">자유게시판</a>

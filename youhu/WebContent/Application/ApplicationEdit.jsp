@@ -4,7 +4,6 @@
 <jsp:include page="/top.jsp"/>
 <p></p>
 <form name="appF" id="appF" action="appEdit.do" method="post">
-
 <div class="container">
 	<div class="col-md-12">
 		<div class="row">
@@ -80,6 +79,7 @@
 		</div>
 	</div>
 </div>
+	<input type="text" name="aidx">
 </form>
 
 <jsp:include page="/foot.jsp"/>

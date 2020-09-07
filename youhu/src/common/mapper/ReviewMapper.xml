@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="common.mapper.ReviewMapper">
+	
+	<insert id="reviewInsert" parameterType="Review">
+		insert into Review(Review_seq.nextval, #{subject}, #{name}, 
+		#{content},sysdate,#{image},#{image2},#{downcg_code},#{midx})
+	</insert>
+	
+	<select id="getReviewList" resultType="Review">
+		select *from review order by ridx desc
+	</select>
+	
+	<select id="getReviewCount" resultType="_int">
+		select count(ridx) from review
+	</select>
+	
+	
+</mapper>

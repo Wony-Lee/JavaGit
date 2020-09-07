@@ -17,11 +17,13 @@ public class ApplicationListAction extends AbstractAction {
 	public void execute(HttpServletRequest req, HttpServletResponse res) throws Exception {
 		
 		// 총 게시글 가져오기
-		int totalCount = dao.getAppCount();
+		/* int totalCount = dao.getAppCount(); */
 		
 		List<ApplicationVO> arr = dao.getAppList();
 		
-		req.setAttribute("totalCount",totalCount);
+		/*
+		 * req.setAttribute("totalCount",totalCount);
+		 */		
 		req.setAttribute("appList", arr);
 		this.setViewPage("./Application/ApplicationList.jsp");
 		this.setRedirect(false);

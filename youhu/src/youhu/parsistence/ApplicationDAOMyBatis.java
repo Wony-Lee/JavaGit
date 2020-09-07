@@ -53,17 +53,13 @@ public class ApplicationDAOMyBatis extends DAOMyBatisBase{
 		}
 	}
 	
-	//리스트에 게시글을 뿌려줌
-	public int getAppCount() {
-		try {
-			ses = this.getSqlSessionFactory().openSession();
-			int count = ses.selectOne(NS+".getAppCount");
-			
-			return count;
-		} finally {
-			close(ses);
-		}
-	}
+	/*
+	 * //리스트에 게시글을 뿌려줌 public int getAppCount() { try { ses =
+	 * this.getSqlSessionFactory().openSession(); int count =
+	 * ses.selectOne(NS+".getAppCount");
+	 * 
+	 * return count; } finally { close(ses); } }
+	 */
 	
 	public ApplicationVO AppInfo(String midx)
 	{

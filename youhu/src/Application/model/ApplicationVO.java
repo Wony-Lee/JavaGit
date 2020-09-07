@@ -21,6 +21,24 @@ public class ApplicationVO {
 		
 	}
 	
+	
+	
+	public ApplicationVO(int aidx, String name, int sex, String birth, String tel, String post, String addr1,
+			String addr2, String contents) {
+		super();
+		this.aidx = aidx;
+		this.name = name;
+		this.sex = sex;
+		this.birth = birth;
+		this.tel = tel;
+		this.post = post;
+		this.addr1 = addr1;
+		this.addr2 = addr2;
+		this.contents = contents;
+	}
+
+
+
 	public ApplicationVO(int aidx, String name, int sex, String birth, String tel, String post, String addr1, String addr2,
 			String contents, Timestamp wdate) {
 		super();

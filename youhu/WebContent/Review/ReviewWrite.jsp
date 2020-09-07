@@ -9,13 +9,13 @@
 				<div class="col-md-2">
 					<ul class="nav flex-column">
 					  <li class="nav-item">
-					    <a class="nav-link" href="../Application/Application.jsp">봉사신청</a>
+					    <a class="nav-link" href="appList.do">봉사신청</a>
 					  </li>
 					  <li class="nav-item">
-					    <a class="nav-link" href="Review.jsp">분양후기</a>
+					    <a class="nav-link" href="ReviewList.do">분양후기</a>
 					  </li>
 					  <li class="nav-item">
-					    <a class="nav-link" href="../FreeBoard/Board.jsp">자유게시판</a>
+					    <a class="nav-link" href="BoardList.do">자유게시판</a>
 					  </li>
 					</ul>
 				</div>
