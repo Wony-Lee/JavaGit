@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="info.mapper.InfoMapper">
+
+	<!-- 연도별 종류별 현황 가져오기  -->
+	<select id="selectByDog" parameterType="string"
+		resultType="Info">
+		select <include refid="dog_column" />
+		from animal_condition where years=#{value} 
+	</select>
+	
+	<select id="selectByCat" parameterType="string"
+		resultType="Info">
+		select <include refid="cat_column" />
+		from animal_condition where years=#{value} 
+	</select>	
+	<select id="selectByDog" parameterType="string"
+		resultType="Info">
+		select <include refid="etc_column" />
+		from animal_condition where years=#{value} 
+	</select>
+	
+	<!-- 연도별 자치구별 현황 가져오기 -->
+	<select id="selectByArea" parameterType="string"
+		resultType="Info">
+		select gu, gu_sum from gu_condition where years=#{value} 
+	</select>
+
+	
+	<sql id="dog_column">
+		dog_sum, dog_trans, dog_adopt, dog_death, dog_moor,
+	</sql>
+	<sql id="cat_column">
+		cat_sum, cat_trans, cat_adopt, cat_death, cat_moor,
+	</sql>
+	<sql id="etc_column">
+		etc_sum, etc_trans, etc_adopt, etc_death, etc_moor
+	</sql>
+	
+</mapper>
