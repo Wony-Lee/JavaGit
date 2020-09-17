@@ -24,7 +24,8 @@ public class ApplicationEditFormAction extends AbstractAction {
 		}
 		int member = Integer.parseInt(midx);
 		ApplicationDAOMyBatis dao = new ApplicationDAOMyBatis();
-		ApplicationVO avo = dao.AppInfo(midx.trim());
+		ApplicationVO avo = dao.AppInfo(aidx.trim());
+		
 		if(avo==null) {
 			String viewPage=CommonUtil.addMsgBack(req, "해당 글이 존재하지 않습니다.");
 			this.setViewPage(viewPage);
@@ -32,7 +33,9 @@ public class ApplicationEditFormAction extends AbstractAction {
 			return;
 		}
 		
-		this.setViewPage("ApplicationEdit.jsp");
+		req.setAttribute("avo", avo);
+		
+		this.setViewPage("Application/ApplicationEdit.jsp");
 		this.setRedirect(false);
 	}
 

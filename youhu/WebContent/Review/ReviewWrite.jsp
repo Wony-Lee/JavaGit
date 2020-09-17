@@ -2,6 +2,7 @@
     pageEncoding="UTF-8"%>
 <jsp:include page="../top.jsp"/>
 <p></p>
+<form id="revF" name="revF" action="ReviewWrite.do" method="post">
 <div class="container">
 	<div class="col-md-12">
 		<div class="row">
@@ -48,22 +49,20 @@
 					
 					<tr>
 						<td colspan="2">이미지 첨부</td>
-						<td colspan="2">첨부할버튼</td>
+						<td colspan="2"><input type="file" name="image1"></td>
 						
 					</tr>
 					
 					<tr>		
 						<td colspan="2">
 						<div class="justify-content-center"  style="border:1px solid gold; width:100%">
-						<img src="../images/a1.jpg" class="rounded" style="width:100%">
+						<img src="../images/a1.jpg" name="image1" class="rounded" style="width:100%">
 						</div>
 						</td>
-						
-						</td>
+					
 						<td colspan="2">
 						<div class="justify-content-center"  style="border:1px solid gold; width:100%">
-						<img src="../images/a1.jpg" class="rounded" alt="Cinque Terre" style="width:100%">
-						
+						<img src="../images/a1.jpg" name="image2" class="rounded" alt="Cinque Terre" style="width:100%">
 						</div>
 						</td>
 
@@ -71,10 +70,10 @@
 					
 					<tr>
 						<td class="text-right" colspan="2">
-						<button class="btn btn-outline-success">작성</button>
+						<button type="submit" class="btn btn-outline-success" id="btnWrite" name="btnWrite">작성</button>
 						</td>
 						<td class="text-left" colspan="2">
-						<button class="btn btn-outline-danger" onclick="location.href='javascript:history.back()'">취소</button>
+						<button class="btn btn-outline-danger" onclick="location.href='ReviewList.do'">취소</button>
 						</td>
 					</tr>
 				</table>
@@ -82,4 +81,27 @@
 		</div>
 	</div>
 </div>
+</form>
+<script>
+		$(function(){
+			$('#btnWrite').click(function(){
+				if(!$('#name').val()){
+					alert('이름을 입력해주세요.');
+					$('#name').focus();
+					return false;
+				}
+				if(!$('#center').val()){
+					alert('보호소를 입력해주세요.');
+					$('#center').focus();
+					return false;
+				}
+				if(!$('#content').val()){
+					alert('내용을 입력해주세요.');
+					$('#content').focus();
+					return false;
+				}
+				$('#revF').submit();
+			})
+		})
+</script>
 <jsp:include page="../foot.jsp"/>

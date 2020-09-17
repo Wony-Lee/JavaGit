@@ -22,7 +22,10 @@ public class ApplicationEditAction extends AbstractAction {
 		String addr1 = req.getParameter("addr1");
 		String addr2 = req.getParameter("addr2");
 		String contents = req.getParameter("contents");
-	
+		System.out.println(aidx);
+		System.out.println(name);
+		System.out.println(tel);
+		System.out.println(post);
 
 		if(aidx==null||name==null||tel==null||post==null||
 				aidx.trim().isEmpty()||name.trim().isEmpty()
@@ -44,7 +47,8 @@ public class ApplicationEditAction extends AbstractAction {
 		String msg = (n>0)?"수정 성공":"수정 실패";
 		String loc = (n>0)?"appList.do":"javascript:history.back()";
 		
-		this.setViewPage(CommonUtil.addMsgLoc(req, msg, loc));
+		String viewPage = CommonUtil.addMsgLoc(req, msg, loc);
+		this.setViewPage(viewPage);
 		this.setRedirect(false);
 	}
 

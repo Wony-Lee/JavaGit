@@ -129,6 +129,30 @@ public class ApplicationVO {
 		this.post = post;
 	}
 
+	public int getMidx() {
+		return midx;
+	}
+
+
+
+	public void setMidx(int midx) {
+		this.midx = midx;
+	}
+
+
+
+	public int getDowncg_code() {
+		return downcg_code;
+	}
+
+
+
+	public void setDowncg_code(int downcg_code) {
+		this.downcg_code = downcg_code;
+	}
+
+
+
 	public String getAddr1() {
 		return addr1;
 	}

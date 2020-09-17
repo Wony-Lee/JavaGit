@@ -20,12 +20,12 @@
 </select>
 
 <select id="AppInfo" resultType="Application" parameterType="string">
-	select name,sex,birth,tel,post,addr1,addr2,contents,sysdate,midx,downcg_code
+	select aidx,name,sex,birth,tel,post,addr1,addr2,contents,sysdate,midx,downcg_code
 	from applicationview where aidx=#{aidx}
 </select>
 
 <update id="applicationUpdate" parameterType="Application">
-	update applicationview set contents=#{contents} where midx = #{midx}
+	update applicationview set contents = #{contents} where aidx = #{aidx}
 </update>
 
 </mapper>

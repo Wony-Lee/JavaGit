@@ -49,14 +49,14 @@
 					<tr>		
 						<td colspan="2">
 						<div class="justify-content-center"  style="width:100%">
-						<img src="../images/a1.jpg" class="rounded" alt="image1" style="width:100%">
+						<img src="../images/a1.jpg" name="image1" type="file" class="rounded" alt="image1" style="width:100%">
 						</div>
 						</td>
 						
 						</td>
 						<td colspan="2">
 						<div class="justify-content-center"  style="width:100%">
-						<img src="../images/a1.jpg" class="rounded" alt="image2" style="width:100%">
+						<img src="../images/a1.jpg" name="image2" class="rounded" alt="image2" style="width:100%">
 						
 						</div>
 						</td>

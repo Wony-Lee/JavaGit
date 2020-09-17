@@ -69,15 +69,26 @@
 					<textarea class="form-control" cols="4" rows="4" placeholder="Self-introduction" readonly>${avo.contents}</textarea></td>
 				</tr>
 				<tr>
-					<td class="text-right" colspan="2"><button type="button" onclick="location.href='appEdit.do'" class="btn btn-outline-success">수정</button></td>
+					<td class="text-right" colspan="2"><button type="button" onclick="send()" class="btn btn-outline-success">수정</button></td>
 					<td class="text-left" colspan="2"><button type="button" onclick="location.href='appList.do'" class="btn btn-outline-danger">취소</button></td>
 				</tr>
 			</table>
-			
+				
 	</c:if>
 			</div>
 		</div>
 	</div>
+
 </div>
 
+<form name="aform" action="appEdit.do" method="post">
+<input type="text" name="aidx" value="${avo.aidx}">
+<input type="text" name="midx" value="${avo.midx}">
+</form>
+
+<script type="text/javascript">
+	function send(){
+		aform.submit();
+	}
+</script>
 <jsp:include page="/foot.jsp"/>

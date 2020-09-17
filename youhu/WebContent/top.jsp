@@ -66,7 +66,7 @@
 			<div class="collapse navbar-collapse" id="navbar16">
 				<ul class="navbar-nav ml-auto">
 						<li class="nav-item"><a class="nav-link" href="/news.jsp">공지사항</a></li>
-						<li class="nav-item"><a class="nav-link" href="/input">입양/분실등록</a></li>
+						<li class="nav-item"><a class="nav-link" href="<%=myctx%>/animal.do">입양/분실등록</a></li>
 						<li class="nav-item"><a class="nav-link" href="<%=myctx%>/appList.do">게시판</a></li>
 						<li class="nav-item"><a class="nav-link" href="/sss.jsp">고객센터</a></li>
 						<li class="nav-item"><a class="nav-link" href="#">업체정보</a></li>

@@ -8,6 +8,7 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 		<typeAlias type="user.model.MemberVO" alias="Member"/>
 		<typeAlias type="Board.model.BoardVO" alias="Board"/>
 		<typeAlias type="Review.model.ReviewVO" alias="Review"/>
+		<typeAlias type="anim.model.AnimalVO" alias="Animal"/>
 	</typeAliases>
 
 	<environments default="MyDBCP">
@@ -37,5 +38,6 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 		<mapper resource="common/mapper/MemberMapper.xml"/>
 		<mapper resource="common/mapper/BoardMapper.xml"/>
 		<mapper resource="common/mapper/ReviewMapper.xml"/>
+		<mapper resource="common/mapper/AnimalMapper.xml"/>
 	</mappers>
 </configuration>

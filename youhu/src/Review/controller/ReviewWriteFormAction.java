@@ -10,7 +10,7 @@ public class ReviewWriteFormAction extends AbstractAction {
 	@Override
 	public void execute(HttpServletRequest req, HttpServletResponse res) throws Exception {
 		
-		this.setViewPage("Application/ApplicationWrite.jsp");
+		this.setViewPage("Review/ReviewWrite.jsp");
 		this.setRedirect(false);
 
 	}
