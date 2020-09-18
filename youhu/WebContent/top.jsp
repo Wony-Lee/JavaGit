@@ -68,7 +68,7 @@
 						<li class="nav-item"><a class="nav-link" href="/news.jsp">공지사항</a></li>
 						<li class="nav-item"><a class="nav-link" href="<%=myctx%>/animal.do">입양/분실등록</a></li>
 						<li class="nav-item"><a class="nav-link" href="<%=myctx%>/appList.do">게시판</a></li>
-						<li class="nav-item"><a class="nav-link" href="/sss.jsp">고객센터</a></li>
+						<li class="nav-item"><a class="nav-link" href="<%=myctx%>/qnalist.do">고객센터</a></li>
 						<li class="nav-item"><a class="nav-link" href="<%=myctx%>/infoCenter.do">업체정보</a></li>
 						<li class="nav-item"><a class="nav-link" href="#">후원처</a></li>
 				</ul>

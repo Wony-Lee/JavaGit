@@ -35,7 +35,7 @@ public class conditionAction extends AbstractAction {
 		req.setAttribute("findType", findType);
 		req.setAttribute("years", years);
 		
-		this.setViewPage("presentCondition.jsp");
+		this.setViewPage("/info/presentCondition.jsp");
 		this.setRedirect(false);
 	}
 

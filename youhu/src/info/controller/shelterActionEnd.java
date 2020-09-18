@@ -35,8 +35,8 @@ public class shelterActionEnd extends AbstractAction {
 		}
 		System.out.println(data);
 		req.setAttribute("data", data);
-		this.setViewPage("shelterResult.jsp"); 
-		this.setRedirect(false); 
+		this.setViewPage("/info/shelterResult.jsp"); 
+		this.setRedirect(false);
 	}
 
 }

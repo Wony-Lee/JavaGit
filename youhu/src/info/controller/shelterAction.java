@@ -9,7 +9,7 @@ public class shelterAction extends AbstractAction {
 
 	@Override
 	public void execute(HttpServletRequest req, HttpServletResponse res) throws Exception {
-		this.setViewPage("animalShelter.jsp"); 
+		this.setViewPage("/info/ShelterSample.jsp"); 
 		this.setRedirect(false); 
 	}
 

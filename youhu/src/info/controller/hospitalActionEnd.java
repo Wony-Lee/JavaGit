@@ -26,8 +26,17 @@ public class hospitalActionEnd extends AbstractAction {
 			String sort="sim";	
 			data=hospital.getData(keyword);
 		}
+		
+		
+		int i=data.indexOf("<?xml version=\"1.0\" encoding=\"UTF-8\"?>");
+		int len="<?xml version=\"1.0\" encoding=\"UTF-8\"?>".length();
+		System.out.println("len="+len);
+		if(i!=-1) {
+			data=data.substring(len);
+		}
+		System.out.println(data);
 		req.setAttribute("data", data);
-		this.setViewPage("hospitalResult.jsp"); 
+		this.setViewPage("/info/hospitalResult.jsp"); 
 		this.setRedirect(false); 
 	}
 

@@ -11,7 +11,7 @@ public class infoAction extends AbstractAction {
 	public void execute(HttpServletRequest req, HttpServletResponse res) throws Exception {
 		//System.out.println("Center�Ұ� ������");
 		
-		this.setViewPage("infoCenter.jsp"); 
+		this.setViewPage("/info/infosample.jsp"); 
 		this.setRedirect(false); 
 	}
 

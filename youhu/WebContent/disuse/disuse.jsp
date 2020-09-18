@@ -35,7 +35,7 @@
       	<tr>
     	 	<td colspan="2" width="100%"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3163.8703855747754!2d126.89522812503672!3d37.534552551234896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c9ec36e913c5b%3A0x68433d470eb2130!2z7J207ZmU67mM65Sp!5e0!3m2!1sko!2skr!4v1597123297361!5m2!1sko!2skr" 
     	 	width="100%" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
-    	 	</iframe></td>
+    	 	</iframe></td></tr>
     	</table>
       </div>
       

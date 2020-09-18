@@ -53,8 +53,8 @@
 					<button class="btn btn-outline-primary" onclick="location.href='ApplicationWrite.jsp'">신청하기</button></td>
 					</tr><!-- table foot -->
 					
-				</table> <!-- table end -->
-			</div>
+				</tab!-- table end -->
+			</div>le> <
 		</div>
 	</div>
 </div>

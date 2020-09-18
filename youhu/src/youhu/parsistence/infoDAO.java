@@ -17,7 +17,7 @@ public class infoDAO extends DAOMyBatisBase{
 	protected Connection con;
 	protected PreparedStatement ps;
 	protected ResultSet rs;
-	private final String NS="info.mapper.InfoMapper";
+	private final String NS="youhu.parsistence.InfoMapper";
 	private SqlSession ses;
 	
 	public infoDAO() {

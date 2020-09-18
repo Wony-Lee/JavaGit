@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="info.mapper.InfoMapper">
+<mapper namespace="common.mapper.InfoMapper">
 
 	<!-- 연도별 종류별 현황 가져오기  -->
 	<select id="selectByDog" parameterType="string"
@@ -16,13 +16,18 @@
 		select <include refid="cat_column" />
 		from animal_condition where years=#{value} 
 	</select>	
+ 
+<!-- 
 	<select id="selectByDog" parameterType="string"
 		resultType="Info">
 		select <include refid="etc_column" />
 		from animal_condition where years=#{value} 
 	</select>
+ -->
+ 
 	
 	<!-- 연도별 자치구별 현황 가져오기 -->
+	
 	<select id="selectByArea" parameterType="string"
 		resultType="Info">
 		select gu, gu_sum from gu_condition where years=#{value} 

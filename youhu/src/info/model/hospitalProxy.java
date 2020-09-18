@@ -17,7 +17,8 @@ public class hospitalProxy {
 		String key="667259714363686c34387371515879";
 		String type="xml";
 		String service="SeoulAnimalHospital";
-		String url="http://openapi.seoul.go.kr:8088/sample/xml/SeoulAnimalHospital/1/5/"+key; 
+		String url="http://openapi.seoul.go.kr:8088/"+key+"/xml/SeoulAnimalHospital/1/5/?START_INDEX=1&END_INDEX=10";
+
 		int start_index=1;
 		int end_index=10;
 		
@@ -25,7 +26,7 @@ public class hospitalProxy {
         try {
             text = URLEncoder.encode(keyword, "UTF-8");
         } catch (UnsupportedEncodingException e) {
-            throw new RuntimeException("�˻��� ���ڵ� ����",e);
+            throw new RuntimeException("예외ㅗ:",e);
         }
         
         String queryStr="?query="+text;
@@ -33,7 +34,7 @@ public class hospitalProxy {
         String apiURL = "?query="+text; 
         
         Map<String, String> requestHeaders = new HashMap<>(); 
-        String responseBody = get(apiURL,requestHeaders);
+        String responseBody = get(url+apiURL,requestHeaders);
         System.out.println(responseBody);
         return responseBody;
 	}
