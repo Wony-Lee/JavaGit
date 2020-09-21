@@ -24,21 +24,27 @@ public class ReviewWriteAction extends AbstractAction{
 		MultipartRequest mr = new MultipartRequest(req, upDir, 10*1024*1024, "UTF-8",
 				new DefaultFileRenamePolicy());
 		
-		String ridx = mr.getParameter("ridx");
 		String subject = mr.getParameter("subject");
 		String name = mr.getParameter("name");
 		String content = mr.getParameter("content");
 		Timestamp indate = new Timestamp(System.currentTimeMillis());
-		String image1 = mr.getParameter("image1");
-		String image2 = mr.getParameter("image2");
+		String image1 = mr.getFilesystemName("image1");
+		String center = mr.getParameter("center");
 		String downcg_code = mr.getParameter("downcg_code");
 		String midx = mr.getParameter("midx");
 		
-		int ridx_int = Integer.parseInt(ridx);
+		System.out.println("sub====>"+subject);
+		System.out.println("name===>"+name);
+		System.out.println("content===>"+content);
+		System.out.println("image1===>"+image1);
+		System.out.println("center===>"+center);
+		System.out.println("down===>"+downcg_code);
+		System.out.println("midx===>"+midx);
+		
 		int dc_int = Integer.parseInt(downcg_code);
 		int midx_int = Integer.parseInt(midx);
 		
-		ReviewVO item = new ReviewVO(ridx_int,subject,name,content,indate,image1,image2,dc_int,midx_int);
+		ReviewVO item = new ReviewVO(0,subject,name,content,indate,image1,center,0,midx_int);
 		ReviewDAOMyBatis dao = new ReviewDAOMyBatis();
 		int n = dao.reviewInsert(item);
 		

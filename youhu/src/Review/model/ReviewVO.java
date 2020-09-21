@@ -10,7 +10,7 @@ public class ReviewVO {
 	private String content;
 	private Timestamp indate;
 	private String image1;
-	private String image2;
+	private String center; 
 	private int downcg_code;
 	private int midx;
 	
@@ -20,7 +20,7 @@ public class ReviewVO {
 	}
 	
 	public ReviewVO(int ridx, String subject, String name, String content, Timestamp indate, String image1,
-			String image2, int downcg_code, int midx) {
+			String center ,int downcg_code, int midx) {
 		super();
 		this.ridx = ridx;
 		this.subject = subject;
@@ -28,7 +28,7 @@ public class ReviewVO {
 		this.content = content;
 		this.indate = indate;
 		this.image1 = image1;
-		this.image2 = image2;
+		this.center = center;
 		this.downcg_code = downcg_code;
 		this.midx = midx;
 	}
@@ -71,11 +71,11 @@ public class ReviewVO {
 	public void setImage1(String image1) {
 		this.image1 = image1;
 	}
-	public String getImage2() {
-		return image2;
+	public String getcenter() {
+		return center;
 	}
-	public void setImage2(String image2) {
-		this.image2 = image2;
+	public void setcenter(String center) {
+		this.center = center;
 	}
 	public int getDowncg_code() {
 		return downcg_code;

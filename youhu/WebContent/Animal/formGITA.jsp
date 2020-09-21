@@ -5,7 +5,7 @@
 
 
 <div class="text-left p-5">
-	<h3 class="text-warning">${form3}</h3>
+	<h3 class="text-warning">${form3} 기타인데 폰트깨져서 안나옴</h3>
 	<div class="row mt-4">
 		<c:if test="${GITAList eq null or empty GITAList}">
 			<div class="col-md-4">

@@ -5,7 +5,7 @@
 
 
 <div class="text-left p-5">
-	<h3 class="text-warning">${form2}</h3>
+	<h3 class="text-warning">${form2}고양인데 폰트 깨져서 안나옴</h3>
 	<div class="row mt-4">
 		<c:if test="${CATList eq null or empty CATList}">
 			<div class="col-md-4">

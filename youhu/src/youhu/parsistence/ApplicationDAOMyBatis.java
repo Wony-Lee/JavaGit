@@ -53,6 +53,7 @@ public class ApplicationDAOMyBatis extends DAOMyBatisBase{
 		}
 	}
 	
+	
 	/*
 	 * //리스트에 게시글을 뿌려줌 public int getAppCount() { try { ses =
 	 * this.getSqlSessionFactory().openSession(); int count =

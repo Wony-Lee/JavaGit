@@ -116,7 +116,7 @@
 							<input type="file" name="image" id="image" value="파일찾기" title="파일찾기"
 							accept=".png,.jpg,.jpeg,.gif" onchange="preImg(this, 'img_view', 313, 320)">
 							<div id="img_view" style="margin-top:5px;"></td>
-							
+
 						</tr>
 						<tr>
 							<td class="text-center" width="15%"><b>작성자</b></td>

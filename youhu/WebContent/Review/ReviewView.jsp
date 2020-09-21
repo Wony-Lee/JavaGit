@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <jsp:include page="../top.jsp"/>
 <p></p>
 <div class="container">
@@ -25,7 +27,6 @@
 					<tr>
 						<th class="text-center" colspan="4"><h2>분양후기</h2></th>
 					</tr>
-					
 					<tr>
 						<td style="vertical-align: middle;">이름</td>
 						<td><input class="form-control" readonly></td>

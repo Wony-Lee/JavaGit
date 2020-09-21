@@ -18,7 +18,6 @@ public class ApplicationWriteFormAction extends AbstractAction {
 		
 		this.setViewPage("Application/ApplicationWrite.jsp");
 		this.setRedirect(false);
-
 	}
 
 }
